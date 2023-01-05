@@ -1,12 +1,13 @@
 import React from 'react';
 import './App.css';
+import Form from './Form';
 import { useState } from 'react';
 function App() {
   // React Hooks
   const [chng, setChng] = useState('');
   const [num, setNum] = useState(0);
   const [bolean, setBolean] = useState(true);
-  const [arr, setArr] = useState(['a','b','c']);
+  const [arr, setArr] = useState(['a', 'b', 'c']);
   const [inpt, setInpt] = useState('');
   const [password, setPassword] = useState('');
   //  JS
@@ -24,7 +25,7 @@ function App() {
     setArr([num, ' : ', secondNum, ' : ', chng, ' : ', secondString, ' : ', inpt])
     console.log(arr);
   }
-  function passfunc(p){
+  function passfunc(p) {
     setPassword(p.target.value);
     console.log(password);
   }
@@ -56,6 +57,10 @@ function App() {
       <button onClick={() => { secondNum += 20; setNum(num + secondNum); console.log(num / 9); }}>Number</button>
       <button onClick={() => { setBolean(10 < 7); console.log(bolean); }}>Boolean</button>
       <button onClick={arrfunc}>Array</button>
+
+      <div>
+        <Form />
+      </div>
     </>
   );
 }
