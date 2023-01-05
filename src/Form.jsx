@@ -1,65 +1,60 @@
 import React from 'react'
 import { useState } from 'react'
+import './App.css';
 import FormChild from './FormChild'
 
 function Form() {
     // State Variables
-   const [userName,setUserName] = useState('');
-   const [pass,setPass] = useState('');
-   const [arr , setArr] = useState([]);
-   const [obj , setObj] = useState({});
+    const [userName, setUserName] = useState('');
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [arr, setArr] = useState([]);
+    const [obj, setObj] = useState({});
     // JS
 
     // function
-     function userInpt(e){
+    function userInpt(e) {
         setUserName(e.target.value);
-     }
-     function userPass(e){
+    }
+    function emailfunc(e) {
+        setEmail(e.target.value);
+    }
+    function userPass(e) {
         setPass(e.target.value);
-     }
-     function btnfunc(){
-        setArr([...arr,userName,pass]);
-        console.log(arr);
+    }
+    function btnfunc() {
         setObj({
-            username : userName,
-            password : pass
+            username: userName,
+            email: email,
+            password: pass
         })
-        console.log(obj);
+        setArr([obj]);
+        console.log(arr);
 
-     }
+    }
 
-     let arry = [
-        {
-            label :'UserName : ',
-            type : 'text',
-            func : userInpt
-        },
-        {
-            label :'Password : ',
-            type : 'password',
-            func : userPass
-        }
-        
-    ]
-        let newArr = arry.map((item)=>{
-           return <FormChild data={item}/>
-            
-        })
-    
-    
-  return (
-    <>
-    <div>
-        <h1>{newArr}</h1>
-        <p>{userName}</p>
-        <label htmlFor="">UserName : </label>
-        <input type="text" value={userName} onChange={userInpt} />
-        <label htmlFor="">Password : </label>
-        <input type="password" value={pass} onChange={userPass} />
-        <button onClick={btnfunc}>Submit</button>
-    </div>
-    </>
-  )
+    //  
+
+
+    return (
+        <>
+            <form action="">
+                <div>
+                    <label htmlFor="">UserName : </label>
+                    <input type="text" value={userName} onChange={userInpt} required />
+                </div>
+                <div>
+                    <label htmlFor="">Email : </label>
+                    <input type='email' value={email} onChange={emailfunc} required />
+                </div>
+                <div>
+                    <label htmlFor="">Password : </label>
+                    <input type="password" value={pass} onChange={userPass} required />
+                </div>
+                <button onClick={btnfunc}>Submit</button>
+            </form>
+        </>
+    )
 }
 
 export default Form
