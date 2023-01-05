@@ -8,6 +8,7 @@ function App() {
   const [bolean, setBolean] = useState(true);
   const [arr, setArr] = useState(['a','b','c']);
   const [inpt, setInpt] = useState('');
+  const [password, setPassword] = useState('');
   //  JS
 
   // Functions
@@ -23,6 +24,10 @@ function App() {
     setArr([num, ' : ', secondNum, ' : ', chng, ' : ', secondString, ' : ', inpt])
     console.log(arr);
   }
+  function passfunc(p){
+    setPassword(p.target.value);
+    console.log(password);
+  }
   // Varaibles
   let secondString = 'This is second String';
   let secondNum = 10;
@@ -31,7 +36,12 @@ function App() {
   return (
     <>
       <p> This is React</p>
-      <label htmlFor="">UserName <h1 style={{ display: 'inline-block' }}>:</h1></label><input type="text" onChange={inptfunc} />
+      <label htmlFor="">UserName :<h1 style={{ display: 'inline-block' }}>:</h1></label>
+      <input type="text" onChange={inptfunc} />
+      <br />
+      <label htmlFor="">Password :<h1 style={{ display: 'inline-block' }}>:</h1></label>
+      <input type="password" onChange={passfunc} />
+
       <br />
       <h1>This is input : {inpt}</h1>
       <h1>This is Array :
