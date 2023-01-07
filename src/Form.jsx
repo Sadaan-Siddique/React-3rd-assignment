@@ -5,7 +5,8 @@ import FormChild from './FormChild'
 
 function Form() {
     // State Variables
-    const [userName, setUserName] = useState('');
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [arr, setArr] = useState([]);
@@ -13,8 +14,11 @@ function Form() {
     // JS
 
     // function
-    function userInpt(e) {
-        setUserName(e.target.value);
+    function userInpt1(e) {
+        setFirstName(e.target.value);
+    }
+    function userInpt2(e) {
+        setLastName(e.target.value);
     }
     function emailfunc(e) {
         setEmail(e.target.value);
@@ -24,7 +28,8 @@ function Form() {
     }
     function btnfunc() {
         setObj({
-            username: userName,
+            firstName,
+            lastName,
             email: email,
             password: pass
         })
@@ -40,8 +45,12 @@ function Form() {
         <>
             <form action="">
                 <div>
-                    <label htmlFor="">UserName : </label>
-                    <input type="text" value={userName} onChange={userInpt} required />
+                    <label htmlFor="">FirstName : </label>
+                    <input type="text" value={firstName} onChange={userInpt1} required />
+                </div>
+                <div>
+                    <label htmlFor="">LastName : </label>
+                    <input type="text" value={lastName} onChange={userInpt2} required />
                 </div>
                 <div>
                     <label htmlFor="">Email : </label>
