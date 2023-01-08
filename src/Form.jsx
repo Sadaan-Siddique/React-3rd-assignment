@@ -44,10 +44,6 @@ function Form() {
     useEffect(() => {
         console.log(arr)
     }, [arr])
-
-    //  
-
-
     return (
         <>
             <h1>React Form</h1>
