@@ -37,7 +37,7 @@ function Form() {
             lastName,
             email: email,
             password: pass
-        }]);
+        },obj]);
     }
     useEffect(() => {
         console.log(arr)
