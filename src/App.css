@@ -32,8 +32,8 @@ form label{
     display: block;
     font-weight: bolder;
     margin-top: 5%;
-    letter-spacing: 0.1px;
-    font-size: 22px;
+    letter-spacing: 0.2px;
+    font-size: 19px;
 }
 form input {
     display: block;
@@ -47,7 +47,7 @@ form input {
     padding-left: 10px;
     font-weight: 500;
     letter-spacing: 0.4px;
-    font-size: 18px;
+    font-size: 16px;
     color: rgb(117, 117, 117);
     width:98% ;
     transition: all;
@@ -76,7 +76,7 @@ form button{
 }
 form button:hover{
     color: white;
-    padding: 9px 20px 7px 20px ;
+    padding: 7px 20px 7px 20px ;
     letter-spacing: 0.1px;
 
 
