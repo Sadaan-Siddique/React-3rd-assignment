@@ -14,6 +14,8 @@ h1{
     font-size: 40px;
     text-transform: uppercase;
     font-weight: 800;
+    transition: all;
+    transition-duration: 0.6s;
 }
 form{
     /* border: 2px solid red; */
@@ -27,6 +29,33 @@ form{
     transition: all;
     transition-duration: 0.3s;
 }
+@media (max-width:390px) {
+    h1{
+        font-size: 35px;
+    }
+    form{
+        width: 290px;
+        height: 410px;
+    }
+    
+}
+@media (max-width:347px) {
+    h1{
+        font-size: 30px;
+    }
+    form{
+        width: 250px;
+        height: 360px;
+    }
+    form label{
+        font-size: 15px;
+    }
+    form button{
+    padding: 7px 17px 7px 17px ;
+
+    }
+    
+}
 form label{
     color:#292b2c;
     display: block;
@@ -34,6 +63,8 @@ form label{
     margin-top: 5%;
     letter-spacing: 0.2px;
     font-size: 19px;
+    transition: all;
+    transition-duration: 0.6s;
 }
 form input {
     display: block;
@@ -59,9 +90,8 @@ form input:hover{
     letter-spacing: 0px;
 }
 form button{
-    margin-top: 3%;
+    margin: 5% 34% 0% 34%;
     padding: 7px 20px 7px 20px ;
-    margin-left: 4px;
     border-radius: 5px;
     border: none;
     box-shadow: 0px 0px 2px black;
@@ -76,7 +106,7 @@ form button{
 }
 form button:hover{
     color: white;
-    padding: 7px 20px 7px 20px ;
+    padding: 7px 19px 7px 19px ;
     letter-spacing: 0.1px;
 
 
