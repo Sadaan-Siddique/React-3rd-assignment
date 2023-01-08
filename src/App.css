@@ -1,17 +1,49 @@
 *{
     margin-top: 0%;
     padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: whitesmoke;
+}
+h1{
+    text-align: center;
+    margin-top: 7vh;
 }
 form{
-    border: 2px solid red;
-    padding: 20px;
+    /* border: 2px solid red; */
+    padding: 10px 24px 20px 20px;
+    height: 500px;
+    background-color:white;
+    width: 400px;
+    margin: auto;
+    margin-top: 3vh;
 }
-form div{
-    border: 1px solid green;
-    display: flex;
-    justify-content: space-between;
-    justify-content: center;
-    padding: 10px;
+form label{
+    color:#292b2c;
+    display: block;
+    font-weight: bolder;
+    margin-top: 7%;
+    letter-spacing: 0.5px;
+    font-size: larger;
 }
-form div input{
+form input {
+    display: block;
+    height: 10%;
+    margin-top: 8px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0xp 10px black;
+    background-color: whitesmoke;
+    padding-left: 10px;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+    font-size: 15px;
+    width:98% ;
+}
+form button{
+    margin-top: 4%;
+    padding: 7px 20px 7px 20px ;
+    margin-left: 4px;
 }
