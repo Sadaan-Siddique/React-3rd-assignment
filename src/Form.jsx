@@ -1,8 +1,6 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import './App.css';
-import FormChild from './FormChild'
-
 function Form() {
     // State Variables
     const [firstName, setFirstName] = useState('');
@@ -10,7 +8,6 @@ function Form() {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [arr, setArr] = useState([]);
-    const [obj, setObj] = useState({});
     // JS
 
     // function
@@ -28,13 +25,7 @@ function Form() {
     }
     function btnfunc(e) {
         e.preventDefault()
-        setObj({
-            firstName,
-            lastName,
-            email: email,
-            password: pass
-        })
-        setArr([...arr, {
+        setArr([...arr,{
             firstName,
             lastName,
             email: email,
