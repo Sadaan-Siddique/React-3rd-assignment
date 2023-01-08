@@ -32,12 +32,12 @@ function Form() {
             email: email,
             password: pass
         })
-        setArr([...arr,{
+        setArr([...arr, {
             firstName,
             lastName,
             email: email,
             password: pass
-        },obj]);
+        }, obj]);
     }
     useEffect(() => {
         console.log(arr)
@@ -47,14 +47,16 @@ function Form() {
             <h1>React Form</h1>
             <form action="">
                 <label htmlFor="">FirstName : </label>
-                <input type="text" value={firstName} onChange={userInpt1} required placeholder='First Name'/>
+                <input type="text" value={firstName} onChange={userInpt1} required placeholder='First Name' />
                 <label htmlFor="">LastName : </label>
-                <input type="text" value={lastName} onChange={userInpt2} required placeholder='Last Name'/>
+                <input type="text" value={lastName} onChange={userInpt2} required placeholder='Last Name' />
                 <label htmlFor="" >Email : </label>
-                <input type='email' value={email} onChange={emailfunc} required placeholder='Email'/>
+                <input type='email' value={email} onChange={emailfunc} required placeholder='Email' />
                 <label htmlFor="">Password : </label>
-                <input type="password" value={pass} onChange={userPass} required placeholder='Password'/>
-                <button onClick={btnfunc}>Submit</button>
+                <input type="password" value={pass} onChange={userPass} required placeholder='Password' />
+                <div>
+                    <button onClick={btnfunc}>Submit</button>
+                </div>
             </form>
         </>
     )
