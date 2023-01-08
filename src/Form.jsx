@@ -8,6 +8,7 @@ function Form() {
     const [email, setEmail] = useState('');
     const [pass, setPass] = useState('');
     const [arr, setArr] = useState([]);
+    const [obj, setObj] = useState({});
     // JS
 
     // function
@@ -25,6 +26,12 @@ function Form() {
     }
     function btnfunc(e) {
         e.preventDefault()
+        setObj({
+            firstName,
+            lastName,
+            email: email,
+            password: pass
+        })
         setArr([...arr,{
             firstName,
             lastName,
