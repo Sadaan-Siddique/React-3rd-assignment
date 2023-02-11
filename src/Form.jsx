@@ -38,6 +38,10 @@ function Form() {
             email: email,
             password: pass
         }, obj]);
+        setFirstName('')
+        setLastName('')
+        setEmail('')
+        setPass('')
     }
     useEffect(() => {
         console.log(arr)
